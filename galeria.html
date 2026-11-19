@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOKA ZONE - Galería</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html">MOKA ZONE</a>
+        <button class="boton-menu" onclick="alternarMenu()" aria-label="Abrir menú">☰</button>
+        <nav id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a class="activo" href="galeria.html">Galería</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Galería</h1>
+        <p>Imágenes del establecimiento y de algunos clientes.</p>
+
+        <div class="galeria">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80" alt="Persona jugando en una computadora">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80" alt="Mando de videojuegos">
+            <img src="IMG/ciber 4.jpg" alt="Jugador frente a una pantalla">
+            <img class="imagen-galeria oculta" src="IMG/ciber 1.webp" alt="Consola de videojuegos">
+            <img class="imagen-galeria oculta" src="IMG/ciber 2.jpg" alt="Accesorios para videojuegos">
+            <img class="imagen-galeria oculta" src="IMG/ciber 3.jpg" alt="Controles de videojuegos">
+        </div>
+
+        <button id="botonMas" onclick="mostrarMas()">Mostrar más imágenes</button>
+    </main>
+
+    <footer>
+        <p>MOKA ZONE - Proyecto educativo</p>
+    </footer>
+</body>
+</html>
