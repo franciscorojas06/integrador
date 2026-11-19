@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOKA ZONE - Inicio</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a class="logo" href="index.html">MOKA ZONE</a>
+
+        <button class="boton-menu" onclick="alternarMenu()" aria-label="Abrir menú">☰</button>
+
+        <nav id="menu">
+            <a class="activo" href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="galeria.html">Galería</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portada carrusel" aria-label="Descubrí MOKA ZONE">
+            <div class="carrusel-diapositivas" aria-live="polite">
+                <article class="diapositiva activa" aria-roledescription="diapositiva">
+                    <img src="IMG/ciber 4.jpg" alt="Amigos compartiendo una partida en una sala de videojuegos">
+                    <div class="diapositiva-contenido">
+                        <p class="diapositiva-etiqueta">Tu lugar para jugar</p>
+                        <h1>Bienvenido a MOKA ZONE</h1>
+                        <p>Un espacio para disfrutar con amigos o jugar solo y tranquilo.</p>
+                        <a class="boton" href="catalogo.html">Explorar catálogo</a>
+                    </div>
+                </article>
+                <article class="diapositiva" aria-roledescription="diapositiva" hidden>
+                    <img src="IMG/ciber 3.jpg" alt="Jugadores disfrutando videojuegos en sus computadoras">
+                    <div class="diapositiva-contenido">
+                        <p class="diapositiva-etiqueta">Compartí la experiencia</p>
+                        <h2>Jugá junto a tus amigos</h2>
+                        <p>Viví cada partida en un ambiente preparado para divertirse.</p>
+                        <a class="boton" href="galeria.html">Ver la galería</a>
+                    </div>
+                </article>
+                <article class="diapositiva" aria-roledescription="diapositiva" hidden>
+                    <img src="IMG/ciber 2.jpg" alt="Espacio de juego con varias computadoras">
+                    <div class="diapositiva-contenido">
+                        <p class="diapositiva-etiqueta">Siempre hay algo nuevo</p>
+                        <h2>Encontrá tu próximo juego</h2>
+                        <p>Explorá opciones para todos los gustos y elegí tu próxima aventura.</p>
+                        <a class="boton" href="catalogo.html">Descubrir juegos</a>
+                    </div>
+                </article>
+            </div>
+            <div class="carrusel-controles">
+                <button type="button" class="carrusel-flecha" onclick="moverCarrusel(-1)" aria-label="Diapositiva anterior">‹</button>
+                <div class="carrusel-indicadores" aria-label="Elegir diapositiva">
+                    <button type="button" class="indicador activo" onclick="irADiapositiva(0)" aria-label="Mostrar diapositiva 1" aria-current="true"></button>
+                    <button type="button" class="indicador" onclick="irADiapositiva(1)" aria-label="Mostrar diapositiva 2"></button>
+                    <button type="button" class="indicador" onclick="irADiapositiva(2)" aria-label="Mostrar diapositiva 3"></button>
+                </div>
+                <button type="button" class="carrusel-flecha" onclick="moverCarrusel(1)" aria-label="Diapositiva siguiente">›</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Conocé el sitio</h2>
+
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <h3>Catálogo</h3>
+                    <p>Encontrá cinco videojuegos y consultá información sobre cada uno.</p>
+                    <a class="boton" href="catalogo.html">Ir al catálogo</a>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Galería</h3>
+                    <p>Visitá una colección de imágenes del establecimiento.</p>
+                    <a class="boton" href="galeria.html">Ver galería</a>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Contacto</h3>
+                    <p>Completá un formulario para dejar un mensaje.</p>
+                    <a class="boton" href="contacto.html">Contactar</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>MOKA ZONE - Proyecto educativo</p>
+    </footer>
+
+</body>
+</html>

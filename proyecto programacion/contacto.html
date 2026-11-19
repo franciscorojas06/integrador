@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOKA ZONE - Contacto</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html">MOKA ZONE</a>
+        <button class="boton-menu" onclick="alternarMenu()" aria-label="Abrir menú">☰</button>
+        <nav id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="galeria.html">Galería</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a class="activo" href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contacto</h1>
+        <p>Completá el formulario. Esta demostración valida los datos, pero no envía correos electrónicos.</p>
+
+        <form class="formulario" onsubmit="return validarFormulario()">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" required oninput="validarCampo(this)">
+            <small id="errorNombre"></small>
+
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" type="email" required oninput="validarCampo(this)">
+            <small id="errorCorreo"></small>
+
+            <label for="asunto">Asunto</label>
+            <input id="asunto" type="text" required oninput="validarCampo(this)">
+            <small id="errorAsunto"></small>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" rows="5" required oninput="validarCampo(this)"></textarea>
+            <small id="errorMensaje"></small>
+
+            <button type="submit">Enviar mensaje</button>
+            <p id="resultadoFormulario" aria-live="polite"></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>MOKA ZONE - Proyecto educativo</p>
+    </footer>
+</body>
+</html>

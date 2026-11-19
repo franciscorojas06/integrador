@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOKA ZONE - Catálogo</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html">MOKA ZONE</a>
+        <button class="boton-menu" onclick="alternarMenu()" aria-label="Abrir menú">☰</button>
+        <nav id="menu">
+            <a href="index.html">Inicio</a>
+            <a class="activo" href="catalogo.html">Catálogo</a>
+            <a href="galeria.html">Galería</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Catálogo de videojuegos</h1>
+        <p>Seleccioná un género para filtrar los juegos.</p>
+
+        <label for="filtroGenero">Filtrar por género:</label>
+        <select id="filtroGenero" onchange="filtrarJuegos()">
+            <option value="todos">Todos</option>
+            <option value="aventura">Aventura</option>
+            <option value="accion">Acción</option>
+            <option value="rol">Rol</option>
+            <option value="deportes">Deportes</option>
+        </select>
+
+        <div class="tarjetas catalogo">
+            <article class="tarjeta juego" data-genero="aventura">
+                <img src="IMG/zelda.avif" alt="portada zelda">
+                <h2>The Legend of Zelda: Breath of the Wild</h2>
+                <p>Género: Aventura</p>
+                <button onclick="mostrarDetalle(this)" aria-expanded="false">Ver más información</button>
+                <div class="informacion-juego" hidden>
+                    <p>Una aventura de exploración en un mundo abierto.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta juego" data-genero="accion">
+                <img src="img/doom.jpg" alt="portada doom eternal">
+                <h2>DOOM Eternal</h2>
+                <p>Género: Acción</p>
+                <button onclick="mostrarDetalle(this)" aria-expanded="false">Ver más información</button>
+                <div class="informacion-juego" hidden>
+                    <p>Un juego de acción en primera persona con ritmo rápido.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta juego" data-genero="rol">
+                <img src="img/witcher 3.webp" alt="portada witcher 3">
+                <h2>The Witcher 3</h2>
+                <p>Género: Rol</p>
+                <button onclick="mostrarDetalle(this)" aria-expanded="false">Ver más información</button>
+                <div class="informacion-juego" hidden>
+                    <p>Un juego de rol centrado en la exploración y las decisiones.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta juego" data-genero="deportes">
+                <img src="IMG/eafc.jpg" alt="portada eafc">
+                <h2>EA Sports FC</h2>
+                <p>Género: Deportes</p>
+                <button onclick="mostrarDetalle(this)" aria-expanded="false">Ver más información</button>
+                <div class="informacion-juego" hidden>
+                    <p>Un videojuego de fútbol con equipos y competiciones.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta juego" data-genero="aventura">
+                <img src="img/maincra.avif" alt="portada minecraft">
+                <h2>Minecraft</h2>
+                <p>Género: Aventura</p>
+                <button onclick="mostrarDetalle(this)" aria-expanded="false">Ver más información</button>
+                <div class="informacion-juego" hidden>
+                    <p>Un juego de construcción y exploración en un mundo de bloques.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>MOKA ZONE - Proyecto educativo</p>
+    </footer>
+</body>
+</html>
